@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1{
+            color:rgb(9, 13, 220);
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic,bold;
+            text-align:center
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+            margin-bottom:30px;
+        }
+        p{
+            font-size:18px;
+        }
+       button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease; 
+    /* transition makes the animation smooth */
+}
+
+button:active {
+    transform: scale(0.8);  /* shrinks the button a little when clicked */
+    background-color: rgb(200, 0, 0); /* darker red while pressed */
+    cursor: grabbing;
+}
+
+    </style>
+<title>
+    My first webpage
+</title>
+</head>
+<body>
+    <h1>LAKSHMIDATH S</h1>
+    <p>
+        Hello, my name is lakshmidath s . i am currently pursuing my B.Tech in computer science and enginnering from Mar athanasius  College of Engineering Kothamangalam. I am currently in 3rd year and still a newibie :-|
+    </p>
+    <img src="me.jpg" alt="My photo from back " width =250 height = 360 >
+    <audio id =clicksound src="meme.mp3"></audio>
+    <button onclick = "changecolor() ">Click Me </button>
+</body>
+<script>
+    function changecolor(){
+        let colors = [ 'red','blue','green','yellow','pink','purple','orange','white','cyan','magenta'];
+        let random = Math.floor(Math.random()* colors.length);
+        let choosencolor = colors[random];
+        document.body.style.backgroundColor = choosencolor;
+        let sound = document.getElementById("clicksound");
+        sound.currentTime = 0;
+        sound.playbackRate=1.5;
+        sound.play();
+    }
+</script>
+</html>
